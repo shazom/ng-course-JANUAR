@@ -14,9 +14,9 @@ export class Todolist {
   private storage: StorageService;
   private _KEY: string;
 
-  constructor(storage: StorageService, key: string) {
+  constructor(storage: StorageService) {
     this.storage = storage;
-    this._KEY    = key;
+    this._KEY    = 'LIST';
     this._items  = storage.get(this._KEY) || [];
   }
 
